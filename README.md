@@ -13,7 +13,7 @@ MobileNet-SSD MultiStick(3本/Hard)
 
 ・Intel Movidius Neural Compute Stick　１本
 
-・OpenCV 3.4.0
+・OpenCV 3.4.1
 
 ・OpenGL
 
@@ -23,10 +23,11 @@ MobileNet-SSD MultiStick(3本/Hard)
 
 ・UVC対応のUSB-Webカメラ
 
+
 # 環境構築
-1.OpenCVのインストール
+1. OpenCVのインストール
 ```
-wget https://github.com/PINTO0309/files/raw/master/opencv-rpi/libopencv3_3.4.1-20180304.1_armhf.deb
+wget https://github.com/PINTO0309/OpenCVonARMv7/blob/master/libopencv3_3.4.1-20180304.1_armhf.deb
 sudo apt install -y ./libopencv3_3.4.1-20180304.1_armhf.deb
 sudo ldconfig
 ```
