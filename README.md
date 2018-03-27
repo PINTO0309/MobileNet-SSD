@@ -23,3 +23,10 @@ MobileNet-SSD MultiStick(3本/Hard)
 
 ・UVC対応のUSB-Webカメラ
 
+# 環境構築
+1.OpenCVのインストール
+```
+wget https://github.com/PINTO0309/files/raw/master/opencv-rpi/libopencv3_3.4.1-20180304.1_armhf.deb
+sudo apt install -y ./libopencv3_3.4.1-20180304.1_armhf.deb
+sudo ldconfig
+```
