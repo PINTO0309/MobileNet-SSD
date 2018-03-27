@@ -58,7 +58,7 @@ $ sudo reboot
 $ cd ~
 $ git clone https://github.com/PINTO0309/MobileNet-SSD.git
 ```
-8. USB-WEBカメラ(UVC対応) と Neural Compute Stick をRaspberryPiのUSBポートへ接続
+8. USB-WEBカメラ(UVC対応) と Neural Compute Stick をRaspberryPiのUSBポートへ接続(Neural Compute Stickをマルチで使用する場合は電圧が不足するためセルフパワーUSB-Hub必須)
 9. RaspberryPiとディスプレイをHDMIケーブルで接続
 10. MobileNet-SSDの実行
 ```
