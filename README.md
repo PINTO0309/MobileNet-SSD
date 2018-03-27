@@ -19,8 +19,6 @@ MobileNet-SSD MultiStick(3本/Hard)
 
 ・numpy
 
-・Samba
-
 ・UVC対応のUSB-Webカメラ
 
 
@@ -43,4 +41,8 @@ $ sudo apt-get install python-opengl
 $ sudo -H pip3 install pyopengl
 $ sudo -H pip3 install pyopengl_accelerate
 $ sudo raspi-config
+```
+「7.Advanced Options」-「A7 GL Driver」-「G2 GL (Fake KMS)」の順に選択し、Raspberry Pi のOpenGL Driver を有効にする
+```
+$ sudo reboot
 ```
