@@ -25,9 +25,22 @@ MobileNet-SSD MultiStick(3本/Hard)
 
 
 # 環境構築
-1. OpenCVのインストール
+1. パッケージ導入
 ```
-wget https://github.com/PINTO0309/OpenCVonARMv7/blob/master/libopencv3_3.4.1-20180304.1_armhf.deb
-sudo apt install -y ./libopencv3_3.4.1-20180304.1_armhf.deb
-sudo ldconfig
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get install python3-pip python3-numpy
+```
+2. OpenCVのインストール
+```
+$ wget https://github.com/PINTO0309/OpenCVonARMv7/blob/master/libopencv3_3.4.1-20180304.1_armhf.deb
+$ sudo apt install -y ./libopencv3_3.4.1-20180304.1_armhf.deb
+$ sudo ldconfig
+```
+3. OpenGLのインストール
+```
+$ sudo apt-get install python-opengl
+$ sudo -H pip3 install pyopengl
+$ sudo -H pip3 install pyopengl_accelerate
+$ sudo raspi-config
 ```
