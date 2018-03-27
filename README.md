@@ -5,7 +5,6 @@ YoloV2 より超速 MobileNetSSD+Neural Compute Stick(NCS)+Raspberry Piによる
 MobileNet-SSD MultiStick(3本/Hard)
 
 ![Riders](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Riders.gif)
-
 # 環境
 ・RaspberryPi 3 + Raspbian Stretch
 
@@ -42,7 +41,8 @@ $ sudo -H pip3 install pyopengl
 $ sudo -H pip3 install pyopengl_accelerate
 $ sudo raspi-config
 ```
-「7.Advanced Options」-「A7 GL Driver」-「G2 GL (Fake KMS)」の順に選択し、Raspberry Pi のOpenGL Driver を有効にする
+4. 「7.Advanced Options」-「A7 GL Driver」-「G2 GL (Fake KMS)」の順に選択し、Raspberry Pi のOpenGL Driver を有効にする
+5. 再起動
 ```
 $ sudo reboot
 ```
