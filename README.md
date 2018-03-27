@@ -55,5 +55,11 @@ $ sudo reboot
 ```
 7. リソース一式のダウンロード
 ```
-$ git clone https://github.com/movidius/ncsdk.git
+$ cd ~
+$ git clone https://github.com/PINTO0309/MobileNet-SSD.git
+```
+8. MobileNet-SSDの実行
+```
+$ cd MobileNet-SSD
+$ python3 MultiStickSSD.py
 ```
