@@ -48,7 +48,7 @@ $ sudo -H pip3 install pyopengl
 $ sudo -H pip3 install pyopengl_accelerate
 $ sudo raspi-config
 ```
-5. 「7.Advanced Options」-「A7 GL Driver」-「G2 GL (Fake KMS)」の順に選択し、Raspberry Pi のOpenGL Driver を有効にする
+5. 「7.Advanced Options」-「A7 GL Driver」-「G2 GL (Fake KMS)」の順に選択し、Raspberry Pi のOpenGL Driver を有効化
 6. 再起動
 ```
 $ sudo reboot
@@ -58,7 +58,9 @@ $ sudo reboot
 $ cd ~
 $ git clone https://github.com/PINTO0309/MobileNet-SSD.git
 ```
-8. MobileNet-SSDの実行
+8. USB-WEBカメラ(UVC対応) と Neural Compute Stick をRaspberryPiのUSBポートへ接続
+9. RaspberryPiとディスプレイをHDMIケーブルで接続
+10. MobileNet-SSDの実行
 ```
 $ cd MobileNet-SSD
 $ python3 MultiStickSSD.py
