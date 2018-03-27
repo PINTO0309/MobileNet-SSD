@@ -22,27 +22,38 @@ MobileNet-SSD + Neural Compute Stick + RaspberryPi3 / MultiStick(3本/Hard)
 
 
 # 環境構築
-1. パッケージ導入
+1. パッケージのインストール
 ```
 $ sudo apt-get update
 $ sudo apt-get upgrade
-$ sudo apt-get install python3-pip python3-numpy
+$ sudo apt-get install python3-pip python3-numpy git cmake
 ```
-2. OpenCVのインストール
+2. NCSDKのインストール
+```
+$ cd ~
+$ git clone https://github.com/movidius/ncsdk.git
+$ cd ncsdk
+$ make install
+```
+3. OpenCVのインストール
 ```
 $ wget https://github.com/PINTO0309/OpenCVonARMv7/blob/master/libopencv3_3.4.1-20180304.1_armhf.deb
 $ sudo apt install -y ./libopencv3_3.4.1-20180304.1_armhf.deb
 $ sudo ldconfig
 ```
-3. OpenGLのインストール
+4. OpenGLのインストール
 ```
 $ sudo apt-get install python-opengl
 $ sudo -H pip3 install pyopengl
 $ sudo -H pip3 install pyopengl_accelerate
 $ sudo raspi-config
 ```
-4. 「7.Advanced Options」-「A7 GL Driver」-「G2 GL (Fake KMS)」の順に選択し、Raspberry Pi のOpenGL Driver を有効にする
-5. 再起動
+5. 「7.Advanced Options」-「A7 GL Driver」-「G2 GL (Fake KMS)」の順に選択し、Raspberry Pi のOpenGL Driver を有効にする
+6. 再起動
 ```
 $ sudo reboot
+```
+7. リソース一式のダウンロード
+```
+$ git clone https://github.com/movidius/ncsdk.git
 ```
