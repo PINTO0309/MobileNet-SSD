@@ -4,7 +4,7 @@ YoloV2 より超速 MobileNetSSD+Neural Compute Stick(NCS)+Raspberry Piによる
 # 動作イメージ
 MobileNet-SSD MultiStick(3本/Hard)
 
-![Riders](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Riders.gif)
+![Riders](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Riders.gif)  ![MultiStick](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/MultiStick.jpeg)
 # 環境
 ・RaspberryPi 3 + Raspbian Stretch
 
