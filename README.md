@@ -70,8 +70,12 @@ $ cd MobileNet-SSD
 $ python3 MultiStickSSD.py
 ```
 
+　
+　
+ 
 # [English] MobileNet-SSD
 Ultra-fast MobileNet-SSD + Neural Compute Stick(NCS) than YoloV2 + Explosion speed by RaspberryPi · Multiple moving object detection with high accuracy
+
 https://qiita.com/PINTO/items/b97b3334ed452cb555e2
 
 # Image of motion
