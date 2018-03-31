@@ -5,6 +5,8 @@ https://qiita.com/PINTO/items/b97b3334ed452cb555e2
 # 動作イメージ
 MobileNet-SSD + Neural Compute Stick + RaspberryPi3 / MultiStick(3本/Hard)
 
+Youtube: https://youtu.be/sQnFbRSqIA8
+
 ![Riders](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Riders.gif)  ![MultiStick](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/MultiStick.jpeg)
 # 環境
 ・RaspberryPi 3 + Raspbian Stretch
@@ -92,6 +94,8 @@ https://qiita.com/PINTO/items/b97b3334ed452cb555e2
 
 # Image of motion
 MobileNet-SSD + Neural Compute Stick + RaspberryPi3 / MultiStick(3 Stick / Hard Motion)
+
+Youtube: https://youtu.be/sQnFbRSqIA8
 
 ![Riders](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Riders.gif)  ![MultiStick](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/MultiStick.jpeg)
 # Environment
