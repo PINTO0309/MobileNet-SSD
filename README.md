@@ -103,7 +103,7 @@ Youtube: https://youtu.be/sQnFbRSqIA8
 
 ・NCSDK v1.12.00
 
-・Intel Movidius Neural Compute Stick　１本
+・Intel Movidius Neural Compute Stick　1 piece
 
 ・OpenCV 3.4.1
 
