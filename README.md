@@ -47,7 +47,7 @@ $ make install
 ```
 4. OpenCVのインストール
 ```
-$ wget https://github.com/PINTO0309/OpenCVonARMv7/blob/master/libopencv3_3.4.1-20180304.1_armhf.deb
+$ wget https://github.com/PINTO0309/OpenCVonARMv7/raw/master/libopencv3_3.4.1-20180304.1_armhf.deb
 $ sudo apt install -y ./libopencv3_3.4.1-20180304.1_armhf.deb
 $ sudo ldconfig
 ```
@@ -137,7 +137,7 @@ $ make install
 ```
 4. Installation of OpenCV
 ```
-$ wget https://github.com/PINTO0309/OpenCVonARMv7/blob/master/libopencv3_3.4.1-20180304.1_armhf.deb
+$ wget https://github.com/PINTO0309/OpenCVonARMv7/raw/master/libopencv3_3.4.1-20180304.1_armhf.deb
 $ sudo apt install -y ./libopencv3_3.4.1-20180304.1_armhf.deb
 $ sudo ldconfig
 ```
