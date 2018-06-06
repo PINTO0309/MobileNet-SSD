@@ -101,7 +101,7 @@ Youtube: https://youtu.be/sQnFbRSqIA8
 # Environment
 ・RaspberryPi 3 + Raspbian Stretch
 
-・NCSDK v1.12.00 (It does not work with NCSDK 2.04)
+・NCSDK v1.12.00 (It does not work with NCSDK v2.04)
 
 ・Intel Movidius Neural Compute Stick　1 piece
 
