@@ -93,6 +93,7 @@ https://github.com/chuanqi305/MobileNet-SSD<br>
 　
 　
 　
+　
 # [English] MobileNet-SSD
 Ultra-fast MobileNet-SSD + Neural Compute Stick(NCS) than YoloV2 + Explosion speed by RaspberryPi · Multiple moving object detection with high accuracy
 
@@ -181,3 +182,9 @@ CONF_SWAPSIZE=100
 
 $ sudo /etc/init.d/dphys-swapfile restart swapon -s
 ```
+
+
+# Procedure for generating original learning data
+https://github.com/movidius/ncappzoo/tree/master/caffe/SSD_MobileNet<br>
+https://github.com/FreeApe/VGG-or-MobileNet-SSD<br>
+https://github.com/chuanqi305/MobileNet-SSD<br>
