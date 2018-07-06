@@ -11,7 +11,7 @@ Youtube: https://youtu.be/sQnFbRSqIA8
 # 環境
 ・RaspberryPi 3 + Raspbian Stretch
 
-・NCSDK v1.12.00
+・NCSDK v1.12.00 (NCSDK 2.04 では動作しません)
 
 ・Intel Movidius Neural Compute Stick　１本
 
@@ -47,7 +47,7 @@ $ make install
 ```
 4. OpenCVのインストール
 ```
-$ wget https://github.com/PINTO0309/OpenCVonARMv7/blob/master/libopencv3_3.4.1-20180304.1_armhf.deb
+$ wget https://github.com/PINTO0309/OpenCVonARMv7/raw/master/libopencv3_3.4.1-20180304.1_armhf.deb
 $ sudo apt install -y ./libopencv3_3.4.1-20180304.1_armhf.deb
 $ sudo ldconfig
 ```
@@ -85,8 +85,15 @@ CONF_SWAPSIZE=100
 
 $ sudo /etc/init.d/dphys-swapfile restart swapon -s
 ```
+
+# 独自学習データの生成手順
+https://github.com/movidius/ncappzoo/tree/master/caffe/SSD_MobileNet<br>
+https://github.com/FreeApe/VGG-or-MobileNet-SSD<br>
+https://github.com/chuanqi305/MobileNet-SSD<br>
 　
- 
+　
+　
+　
 # [English] MobileNet-SSD
 Ultra-fast MobileNet-SSD + Neural Compute Stick(NCS) than YoloV2 + Explosion speed by RaspberryPi · Multiple moving object detection with high accuracy
 
@@ -101,9 +108,9 @@ Youtube: https://youtu.be/sQnFbRSqIA8
 # Environment
 ・RaspberryPi 3 + Raspbian Stretch
 
-・NCSDK v1.12.00
+・NCSDK v1.12.00 (It does not work with NCSDK v2.04)
 
-・Intel Movidius Neural Compute Stick　１本
+・Intel Movidius Neural Compute Stick　1 piece
 
 ・OpenCV 3.4.1
 
@@ -137,7 +144,7 @@ $ make install
 ```
 4. Installation of OpenCV
 ```
-$ wget https://github.com/PINTO0309/OpenCVonARMv7/blob/master/libopencv3_3.4.1-20180304.1_armhf.deb
+$ wget https://github.com/PINTO0309/OpenCVonARMv7/raw/master/libopencv3_3.4.1-20180304.1_armhf.deb
 $ sudo apt install -y ./libopencv3_3.4.1-20180304.1_armhf.deb
 $ sudo ldconfig
 ```
@@ -175,3 +182,9 @@ CONF_SWAPSIZE=100
 
 $ sudo /etc/init.d/dphys-swapfile restart swapon -s
 ```
+
+
+# Procedure for generating original learning data
+https://github.com/movidius/ncappzoo/tree/master/caffe/SSD_MobileNet<br>
+https://github.com/FreeApe/VGG-or-MobileNet-SSD<br>
+https://github.com/chuanqi305/MobileNet-SSD<br>
