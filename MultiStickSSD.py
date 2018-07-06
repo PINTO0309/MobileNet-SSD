@@ -221,7 +221,7 @@ def overlay_on_image(display_image, object_info):
             class_id = object_info_overlay[base_index + 1]
             percentage = int(object_info_overlay[base_index + 2] * 100)
             if (percentage <= min_score_percent):
-                return
+                continue
 
             label_text = LABELS[int(class_id)] + " (" + str(percentage) + "%)"
             box_left = int(object_info_overlay[base_index + 3] * source_image_width)
