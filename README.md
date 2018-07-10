@@ -1,5 +1,7 @@
 # [Japanese] MobileNet-SSD
 YoloV2 より超速 MobileNetSSD+Neural Compute Stick(NCS)+Raspberry Piによる爆速・高精度の複数動体検知<br>
+映像再生と物体検出は非同期実行。<br>
+マルチスティックを実現するために、マルチスレッド かつ OpenGL で実装している。<br>
 **【Qiita記事】 https://qiita.com/PINTO/items/b97b3334ed452cb555e2**<br>
 **【RealSense D435対応版】 https://github.com/PINTO0309/MobileNet-SSD-RealSense.git**
 
@@ -96,7 +98,9 @@ https://github.com/chuanqi305/MobileNet-SSD<br>
 　
 　
 # [English] MobileNet-SSD
-Ultra-fast MobileNet-SSD + Neural Compute Stick(NCS) than YoloV2 + Explosion speed by RaspberryPi · Multiple moving object detection with high accuracy
+Ultra-fast MobileNet-SSD + Neural Compute Stick(NCS) than YoloV2 + Explosion speed by RaspberryPi · Multiple moving object detection with high accuracy.<br>
+Video playback and object detection are executed asynchronously.<br>
+And in order to realize multistick, it is implemented in multi-thread and OpenGL.<br>
 
 **【Japanese Article】https://qiita.com/PINTO/items/b97b3334ed452cb555e2**<br>
 **【RealSense D435 Version】 https://github.com/PINTO0309/MobileNet-SSD-RealSense.git**
