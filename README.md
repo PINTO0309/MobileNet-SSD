@@ -1,102 +1,3 @@
-# [Japanese] MobileNet-SSD
-YoloV2 より超速 MobileNetSSD+Neural Compute Stick(NCS)+Raspberry Piによる爆速・高精度の複数動体検知<br>
-映像再生と物体検出は非同期実行。<br>
-マルチスティックを実現するために、マルチスレッド かつ OpenGL で実装している。<br>
-**【Qiita記事】 https://qiita.com/PINTO/items/b97b3334ed452cb555e2**<br>
-**【RealSense D435対応版】 https://github.com/PINTO0309/MobileNet-SSD-RealSense.git**
-
-# 動作イメージ
-MobileNet-SSD + Neural Compute Stick + RaspberryPi3 / MultiStick(3本/Hard)
-
-Youtube: https://youtu.be/sQnFbRSqIA8
-
-![Riders](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Riders.gif)  ![MultiStick](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/MultiStick.jpeg)
-# 環境
-・RaspberryPi 3 + Raspbian Stretch
-
-・NCSDK v1.12.00 (NCSDK 2.04 では動作しません)
-
-・Intel Movidius Neural Compute Stick　１本
-
-・OpenCV 3.4.1
-
-・OpenGL
-
-・numpy
-
-・UVC対応のUSB-Webカメラ
-
-
-# 環境構築
-1. SWAP領域の一時的な拡張
-```
-$ sudo nano /etc/dphys-swapfile
-CONF_SWAPSIZE=2048
-
-$ sudo /etc/init.d/dphys-swapfile restart swapon -s
-```
-2. パッケージのインストール
-```
-$ sudo apt-get update
-$ sudo apt-get upgrade
-$ sudo apt-get install python3-pip python3-numpy git cmake
-```
-3. NCSDKのインストール
-```
-$ cd ~
-$ git clone https://github.com/movidius/ncsdk.git
-$ cd ncsdk
-$ make install
-```
-4. OpenCVのインストール
-```
-$ wget https://github.com/PINTO0309/OpenCVonARMv7/raw/master/libopencv3_3.4.1-20180304.1_armhf.deb
-$ sudo apt install -y ./libopencv3_3.4.1-20180304.1_armhf.deb
-$ sudo ldconfig
-```
-5. OpenGLのインストール
-```
-$ sudo apt-get install python-opengl
-$ sudo -H pip3 install pyopengl
-$ sudo -H pip3 install pyopengl_accelerate
-$ sudo raspi-config
-```
-6. 「7.Advanced Options」-「A7 GL Driver」-「G2 GL (Fake KMS)」の順に選択し、Raspberry Pi のOpenGL Driver を有効化
-
-7. 再起動
-```
-$ sudo reboot
-```
-8. リソース一式のダウンロード
-```
-$ cd ~
-$ git clone https://github.com/PINTO0309/MobileNet-SSD.git
-```
-9. USB-WEBカメラ(UVC対応) と Neural Compute Stick をRaspberryPiのUSBポートへ接続(Neural Compute Stickをマルチで使用する場合は電圧が不足するためセルフパワーUSB-Hub必須)
-
-10. RaspberryPiとディスプレイをHDMIケーブルで接続
-
-11. MobileNet-SSDの実行
-```
-$ cd MobileNet-SSD
-$ python3 MultiStickSSD.py
-```
-12. SWAP領域の縮小
-```
-$ sudo nano /etc/dphys-swapfile
-CONF_SWAPSIZE=100
-
-$ sudo /etc/init.d/dphys-swapfile restart swapon -s
-```
-
-# 独自学習データの生成手順
-https://github.com/movidius/ncappzoo/tree/master/caffe/SSD_MobileNet<br>
-https://github.com/FreeApe/VGG-or-MobileNet-SSD<br>
-https://github.com/chuanqi305/MobileNet-SSD<br>
-　
-　
-　
-　
 # [English] MobileNet-SSD
 Ultra-fast MobileNet-SSD + Neural Compute Stick(NCS) than YoloV2 + Explosion speed by RaspberryPi.<br>
 Multiple moving object detection with high accuracy.<br>
@@ -195,3 +96,103 @@ $ sudo /etc/init.d/dphys-swapfile restart swapon -s
 https://github.com/movidius/ncappzoo/tree/master/caffe/SSD_MobileNet<br>
 https://github.com/FreeApe/VGG-or-MobileNet-SSD<br>
 https://github.com/chuanqi305/MobileNet-SSD<br>
+　
+　
+ 
+ 
+# [Japanese] MobileNet-SSD
+YoloV2 より超速 MobileNetSSD+Neural Compute Stick(NCS)+Raspberry Piによる爆速・高精度の複数動体検知<br>
+映像再生と物体検出は非同期実行。<br>
+マルチスティックを実現するために、マルチスレッド かつ OpenGL で実装している。<br>
+**【Qiita記事】 https://qiita.com/PINTO/items/b97b3334ed452cb555e2**<br>
+**【RealSense D435対応版】 https://github.com/PINTO0309/MobileNet-SSD-RealSense.git**
+
+# 動作イメージ
+MobileNet-SSD + Neural Compute Stick + RaspberryPi3 / MultiStick(3本/Hard)
+
+Youtube: https://youtu.be/sQnFbRSqIA8
+
+![Riders](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Riders.gif)  ![MultiStick](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/MultiStick.jpeg)
+# 環境
+・RaspberryPi 3 + Raspbian Stretch
+
+・NCSDK v1.12.00 (NCSDK 2.04 では動作しません)
+
+・Intel Movidius Neural Compute Stick　１本
+
+・OpenCV 3.4.1
+
+・OpenGL
+
+・numpy
+
+・UVC対応のUSB-Webカメラ
+
+
+# 環境構築
+1. SWAP領域の一時的な拡張
+```
+$ sudo nano /etc/dphys-swapfile
+CONF_SWAPSIZE=2048
+
+$ sudo /etc/init.d/dphys-swapfile restart swapon -s
+```
+2. パッケージのインストール
+```
+$ sudo apt-get update
+$ sudo apt-get upgrade
+$ sudo apt-get install python3-pip python3-numpy git cmake
+```
+3. NCSDKのインストール
+```
+$ cd ~
+$ git clone https://github.com/movidius/ncsdk.git
+$ cd ncsdk
+$ make install
+```
+4. OpenCVのインストール
+```
+$ wget https://github.com/PINTO0309/OpenCVonARMv7/raw/master/libopencv3_3.4.1-20180304.1_armhf.deb
+$ sudo apt install -y ./libopencv3_3.4.1-20180304.1_armhf.deb
+$ sudo ldconfig
+```
+5. OpenGLのインストール
+```
+$ sudo apt-get install python-opengl
+$ sudo -H pip3 install pyopengl
+$ sudo -H pip3 install pyopengl_accelerate
+$ sudo raspi-config
+```
+6. 「7.Advanced Options」-「A7 GL Driver」-「G2 GL (Fake KMS)」の順に選択し、Raspberry Pi のOpenGL Driver を有効化
+
+7. 再起動
+```
+$ sudo reboot
+```
+8. リソース一式のダウンロード
+```
+$ cd ~
+$ git clone https://github.com/PINTO0309/MobileNet-SSD.git
+```
+9. USB-WEBカメラ(UVC対応) と Neural Compute Stick をRaspberryPiのUSBポートへ接続(Neural Compute Stickをマルチで使用する場合は電圧が不足するためセルフパワーUSB-Hub必須)
+
+10. RaspberryPiとディスプレイをHDMIケーブルで接続
+
+11. MobileNet-SSDの実行
+```
+$ cd MobileNet-SSD
+$ python3 MultiStickSSD.py
+```
+12. SWAP領域の縮小
+```
+$ sudo nano /etc/dphys-swapfile
+CONF_SWAPSIZE=100
+
+$ sudo /etc/init.d/dphys-swapfile restart swapon -s
+```
+
+# 独自学習データの生成手順
+https://github.com/movidius/ncappzoo/tree/master/caffe/SSD_MobileNet<br>
+https://github.com/FreeApe/VGG-or-MobileNet-SSD<br>
+https://github.com/chuanqi305/MobileNet-SSD<br>
+　
