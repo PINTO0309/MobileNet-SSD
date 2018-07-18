@@ -7,6 +7,10 @@ In order to realize high speed rendering with multi stick, it is implemented in 
 **【Japanese Article】https://qiita.com/PINTO/items/b97b3334ed452cb555e2**<br>
 **【RealSense D435 Version】 https://github.com/PINTO0309/MobileNet-SSD-RealSense.git**
 
+# Change history
+[July 19, 2018]　Corresponds to NCSDK v2.00.05.02 / OpenCV 3.4.2 / FPS View<br>
+
+
 # Image of motion
 MobileNet-SSD + Neural Compute Stick + RaspberryPi3 / MultiStick(3 Stick / Hard Motion)
 
@@ -16,11 +20,11 @@ Youtube: https://youtu.be/sQnFbRSqIA8
 # Environment
 ・RaspberryPi 3 + Raspbian Stretch
 
-・NCSDK v1.12.00 (It does not work with NCSDK v2.04)
+・NCSDK v2.00.05.02 (It does not work with NCSDK v1　**[v1 is here](https://github.com/PINTO0309/MobileNet-SSD/tree/v1.0)**)
 
 ・Intel Movidius Neural Compute Stick　1 piece
 
-・OpenCV 3.4.1
+・OpenCV 3.4.2
 
 ・OpenGL
 
@@ -52,8 +56,9 @@ $ make install
 ```
 4. Installation of OpenCV
 ```
-$ wget https://github.com/PINTO0309/OpenCVonARMv7/raw/master/libopencv3_3.4.1-20180304.1_armhf.deb
-$ sudo apt install -y ./libopencv3_3.4.1-20180304.1_armhf.deb
+$ cd ~
+$ wget https://github.com/PINTO0309/OpenCVonARMv7/raw/master/libopencv3_3.4.2-20180709.1_armhf.deb
+$ sudo apt install -y ./libopencv3_3.4.2-20180709.1_armhf.deb
 $ sudo ldconfig
 ```
 5. Installing OpenGL
@@ -107,6 +112,9 @@ YoloV2 より超速 MobileNetSSD+Neural Compute Stick(NCS)+Raspberry Piによる
 **【Qiita記事】 https://qiita.com/PINTO/items/b97b3334ed452cb555e2**<br>
 **【RealSense D435対応版】 https://github.com/PINTO0309/MobileNet-SSD-RealSense.git**
 
+# 変更履歴
+[2018/07/19]　NCSDK v2.00.05.02対応 / OpenCV 3.4.2対応 / FPS View対応<br>
+
 # 動作イメージ
 MobileNet-SSD + Neural Compute Stick + RaspberryPi3 / MultiStick(3本/Hard)
 
@@ -116,11 +124,11 @@ Youtube: https://youtu.be/sQnFbRSqIA8
 # 環境
 ・RaspberryPi 3 + Raspbian Stretch
 
-・NCSDK v1.12.00 (NCSDK 2.04 では動作しません)
+・NCSDK v2.00.05.02 (NCSDK v1では動作しません　**[v1バージョンはこちら](https://github.com/PINTO0309/MobileNet-SSD/tree/v1.0)**)
 
 ・Intel Movidius Neural Compute Stick　１本
 
-・OpenCV 3.4.1
+・OpenCV 3.4.2
 
 ・OpenGL
 
@@ -152,8 +160,8 @@ $ make install
 ```
 4. OpenCVのインストール
 ```
-$ wget https://github.com/PINTO0309/OpenCVonARMv7/raw/master/libopencv3_3.4.1-20180304.1_armhf.deb
-$ sudo apt install -y ./libopencv3_3.4.1-20180304.1_armhf.deb
+$ wget https://github.com/PINTO0309/OpenCVonARMv7/raw/master/libopencv3_3.4.2-20180709.1_armhf.deb
+$ sudo apt install -y ./libopencv3_3.4.2-20180709.1_armhf.deb
 $ sudo ldconfig
 ```
 5. OpenGLのインストール
