@@ -14,9 +14,10 @@ In order to realize high speed rendering with multi stick, it is implemented in 
 # Image of motion
 MobileNet-SSD + Neural Compute Stick + RaspberryPi3 / MultiStick(3 Stick / Hard Motion)
 
-Youtube: https://youtu.be/sQnFbRSqIA8
+**Youtube: https://youtu.be/sQnFbRSqIA8**
 
-![Riders](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Riders.gif)  ![MultiStick](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/MultiStick.jpeg)<br>
+![Riders](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Riders.gif)  ![MultiStick](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/MultiStick.jpeg)<br><br>
+**Youtube: https://youtu.be/_Cbt0gI8niQ**<br>
 ![Goku](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Goku.gif)
 # Environment
 ・RaspberryPi 3 + Raspbian Stretch
@@ -119,9 +120,10 @@ YoloV2 より超速 MobileNetSSD+Neural Compute Stick(NCS)+Raspberry Piによる
 # 動作イメージ
 MobileNet-SSD + Neural Compute Stick + RaspberryPi3 / MultiStick(3本/Hard)
 
-Youtube: https://youtu.be/sQnFbRSqIA8
+**Youtube: https://youtu.be/sQnFbRSqIA8**
 
-![Riders](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Riders.gif)  ![MultiStick](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/MultiStick.jpeg)<br>
+![Riders](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Riders.gif)  ![MultiStick](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/MultiStick.jpeg)<br><br>
+**Youtube: https://youtu.be/_Cbt0gI8niQ**<br>
 ![Goku](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Goku.gif)
 # 環境
 ・RaspberryPi 3 + Raspbian Stretch
