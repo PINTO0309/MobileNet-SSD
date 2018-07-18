@@ -16,7 +16,8 @@ MobileNet-SSD + Neural Compute Stick + RaspberryPi3 / MultiStick(3 Stick / Hard 
 
 Youtube: https://youtu.be/sQnFbRSqIA8
 
-![Riders](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Riders.gif)  ![MultiStick](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/MultiStick.jpeg)
+![Riders](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Riders.gif)  ![MultiStick](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/MultiStick.jpeg)<br>
+![Goku](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Goku.gif)
 # Environment
 ・RaspberryPi 3 + Raspbian Stretch
 
@@ -120,7 +121,8 @@ MobileNet-SSD + Neural Compute Stick + RaspberryPi3 / MultiStick(3本/Hard)
 
 Youtube: https://youtu.be/sQnFbRSqIA8
 
-![Riders](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Riders.gif)  ![MultiStick](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/MultiStick.jpeg)
+![Riders](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Riders.gif)  ![MultiStick](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/MultiStick.jpeg)<br>
+![Goku](https://github.com/PINTO0309/MobileNet-SSD/blob/master/media/Goku.gif)
 # 環境
 ・RaspberryPi 3 + Raspbian Stretch
 
