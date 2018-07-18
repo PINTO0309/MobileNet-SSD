@@ -22,26 +22,26 @@ from OpenGL.GL import *
 from OpenGL.GLU import *
 from OpenGL.GLUT import *
 
-mvnc.SetGlobalOption(mvnc.GlobalOption.LOG_LEVEL, 2)
-
-devices = mvnc.EnumerateDevices()
+mvnc.global_set_option(mvnc.GlobalOption.RW_LOG_LEVEL, 2)
+devices = mvnc.enumerate_devices()
 if len(devices) == 0:
     print("No devices found")
     quit()
 print(len(devices))
 
 devHandle   = []
+graph       = []
 graphHandle = []
 
 with open(join(graph_folder, "graph"), mode="rb") as f:
-    graph = f.read()
+    graph_buffer = f.read()
+
 
 for devnum in range(len(devices)):
+    graph.append(mvnc.Graph('MobileNet-SSD'+str(devnum)))
     devHandle.append(mvnc.Device(devices[devnum]))
-    devHandle[devnum].OpenDevice()
-    graphHandle.append(devHandle[devnum].AllocateGraph(graph))
-    graphHandle[devnum].SetGraphOption(mvnc.GraphOption.ITERATIONS, 1)
-    iterations = graphHandle[devnum].GetGraphOption(mvnc.GraphOption.ITERATIONS)
+    devHandle[devnum].open()
+    graphHandle.append(graph[devnum].allocate_with_fifos(devHandle[devnum], graph_buffer))
 
 print("\nLoaded Graphs!!!")
 
@@ -61,13 +61,14 @@ lock = Lock()
 frameBuffer = []
 results = Queue()
 lastresults = None
-
+fps = ""
 LABELS = ('background',
           'aeroplane', 'bicycle', 'bird', 'boat',
           'bottle', 'bus', 'car', 'cat', 'chair',
           'cow', 'diningtable', 'dog', 'horse',
           'motorbike', 'person', 'pottedplant',
           'sheep', 'sofa', 'train', 'tvmonitor')
+
 
 def init():
     glClearColor(0.7, 0.7, 0.7, 0.7)
@@ -78,7 +79,8 @@ def idle():
 def resizeview(w, h):
     glViewport(0, 0, w, h)
     glLoadIdentity()
-    glOrtho(-w / 1920, w / 1920, -h / 1080, h / 1080, -1.0, 1.0)
+    #glOrtho(-w / 1920, w / 1920, -h / 1080, h / 1080, -1.0, 1.0)
+    glOrtho(-w / 640, w / 640, -h / 480, h / 480, -1.0, 1.0)
 
 def keyboard(key, x, y):
     key = key.decode('utf-8')
@@ -95,7 +97,9 @@ def keyboard(key, x, y):
 
 
 def camThread():   
+    t1 = time.perf_counter()
     global lastresults
+    global fps
 
     s, img = cam.read()
 
@@ -105,8 +109,8 @@ def camThread():
 
     lock.acquire()
     if len(frameBuffer)>10:
-        for i in range(10):
-            del frameBuffer[0]
+        del frameBuffer[0]
+
     frameBuffer.append(img)
     lock.release()
     res = None
@@ -143,7 +147,13 @@ def camThread():
     glFlush()
     glutSwapBuffers()
 
-def inferencer(results, lock, frameBuffer, handle):
+    ## Print FPS
+    t2 = time.perf_counter()
+    time1 = (t2-t1)
+    fps = " {:.1f} FPS".format(1/time1)
+
+
+def inferencer(results, lock, frameBuffer, graph, handle):
     failure = 0
     sleep(1)
     while failure < 100:
@@ -159,12 +169,11 @@ def inferencer(results, lock, frameBuffer, handle):
         failure = 0
         lock.release()
 
-        now = time.time() 
         im = preprocess_image(img)
-        handle.LoadTensor(im.astype(np.float16), None)
-        out, userobj = handle.GetResult()
+        graph.queue_inference_with_fifo_elem(handle[0], handle[1], im.astype(np.float32), img)
+        out, _ = handle[1].read_elem()
+
         results.put(out)
-        print("elapsedtime = ", time.time() - now)
 
 
 def preprocess_image(src):
@@ -177,6 +186,7 @@ def preprocess_image(src):
 
 
 def overlay_on_image(display_image, object_info):
+    global fps
 
     if isinstance(object_info, type(None)):
         return display_image
@@ -207,13 +217,9 @@ def overlay_on_image(display_image, object_info):
             x2_ = str(x2)
             y2_ = str(y2)
 
-            #print('box at index: ' + str(box_index) + ' : ClassID: ' + LABELS[int(object_info[base_index + 1])] + '  '
-            #      'Confidence: ' + str(object_info[base_index + 2]*100) + '%  ' +
-            #      'Top Left: (' + x1_ + ', ' + y1_ + ')  Bottom Right: (' + x2_ + ', ' + y2_ + ')')
-
             object_info_overlay = object_info[base_index:base_index + 7]
 
-            min_score_percent = 10
+            min_score_percent = 75
             source_image_width = img_cp.shape[1]
             source_image_height = img_cp.shape[0]
 
@@ -245,7 +251,8 @@ def overlay_on_image(display_image, object_info):
             label_bottom = label_top + label_size[1]
             cv2.rectangle(img_cp, (label_left - 1, label_top - 1), (label_right + 1, label_bottom + 1), label_background_color, -1)
             cv2.putText(img_cp, label_text, (label_left, label_bottom), cv2.FONT_HERSHEY_SIMPLEX, 0.5, label_text_color, 1)
-
+            
+    cv2.putText(img_cp, fps, (235,15), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (38,0,255), 1, cv2.LINE_AA)
     return img_cp
 
 glutInitWindowPosition(0, 0)
@@ -264,7 +271,7 @@ print("press 'q' to quit!\n")
 threads = []
 
 for devnum in range(len(devices)):
-  t = Thread(target=inferencer, args=(results, lock, frameBuffer, graphHandle[devnum]))
+  t = Thread(target=inferencer, args=(results, lock, frameBuffer, graph[devnum], graphHandle[devnum]))
   t.start()
   threads.append(t)
 
