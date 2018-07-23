@@ -115,7 +115,7 @@ YoloV2 より超速 MobileNetSSD(MobileNetSSD)+Neural Compute Stick(NCS)+Raspber
 映像再生と物体検出は非同期実行。<br>
 マルチスティックを実現するために、マルチスレッド かつ OpenGL で実装している。<br>
 **【Qiita記事】 https://qiita.com/PINTO/items/b97b3334ed452cb555e2**<br>
-**【RealSense D435対応版】 https://github.com/PINTO0309/MobileNet-SSD-RealSense.git**
+**【RealSense D435 + MultiProcessing対応版】 https://github.com/PINTO0309/MobileNet-SSD-RealSense.git**
 
 # 変更履歴
 [2018/07/19]　NCSDK v2.00.05.02対応 / OpenCV 3.4.2対応 / FPS View対応<br>
