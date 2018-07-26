@@ -8,7 +8,7 @@ In order to realize high speed rendering with multi stick, it is implemented in 
 **【RealSense D435 + MultiProcessing Version】 https://github.com/PINTO0309/MobileNet-SSD-RealSense.git**
 
 # Change history
-[July 19, 2018]　Corresponds to NCSDK v2.00.05.02 / OpenCV 3.4.2 / FPS View<br>
+[July 19, 2018]　Corresponds to NCSDK v2.05.00.02 / OpenCV 3.4.2 / FPS View<br>
 [July 27, 2018]　**[Add an unnecessary version of OpenGL (USBCamera / MultiStick / MultiProcessing / RealSense)](https://github.com/PINTO0309/MobileNet-SSD-RealSense)**<br>
 
 # Image of motion
@@ -24,7 +24,7 @@ MobileNet-SSD + Neural Compute Stick(1 Stick) + RaspberryPi3 + USB Camera(640x48
 # Environment
 ・RaspberryPi 3 + Raspbian Stretch
 
-・NCSDK v2.00.05.02 (It does not work with NCSDK v1　**[v1 version is here](https://github.com/PINTO0309/MobileNet-SSD/tree/v1.0)**)
+・NCSDK v2.05.00.02 (It does not work with NCSDK v1　**[v1 version is here](https://github.com/PINTO0309/MobileNet-SSD/tree/v1.0)**)
 
 ・Intel Movidius Neural Compute Stick　1 piece
 
@@ -118,7 +118,7 @@ YoloV2 より超速 MobileNetSSD(MobileNetSSD)+Neural Compute Stick(NCS)+Raspber
 **【RealSense D435 + MultiProcessing対応版】 https://github.com/PINTO0309/MobileNet-SSD-RealSense.git**
 
 # 変更履歴
-[2018/07/19]　NCSDK v2.00.05.02対応 / OpenCV 3.4.2対応 / FPS View対応<br>
+[2018/07/19]　NCSDK v2.05.00.02対応 / OpenCV 3.4.2対応 / FPS View対応<br>
 
 # 動作イメージ
 MobileNet-SSD + Neural Compute Stick + RaspberryPi3 / MultiStick(3本/Hard)
@@ -133,7 +133,7 @@ MobileNet-SSD + Neural Compute Stick(1 Stick) + RaspberryPi3 + USB Camera(640x48
 # 環境
 ・RaspberryPi 3 + Raspbian Stretch
 
-・NCSDK v2.00.05.02 (NCSDK v1では動作しません　**[v1バージョンはこちら](https://github.com/PINTO0309/MobileNet-SSD/tree/v1.0)**)
+・NCSDK v2.05.00.02 (NCSDK v1では動作しません　**[v1バージョンはこちら](https://github.com/PINTO0309/MobileNet-SSD/tree/v1.0)**)
 
 ・Intel Movidius Neural Compute Stick　１本
 
