@@ -9,7 +9,7 @@ In order to realize high speed rendering with multi stick, it is implemented in 
 
 # Change history
 [July 19, 2018]　Corresponds to NCSDK v2.00.05.02 / OpenCV 3.4.2 / FPS View<br>
-[July 27, 2018]　**[Add an unnecessary version of OpenGL (MultiStick / MultiProcessing)](https://github.com/PINTO0309/MobileNet-SSD-RealSense)**<br>
+[July 27, 2018]　**[Add an unnecessary version of OpenGL (USBCamera / MultiStick / MultiProcessing / RealSense)](https://github.com/PINTO0309/MobileNet-SSD-RealSense)**<br>
 
 # Image of motion
 MobileNet-SSD + Neural Compute Stick + RaspberryPi3 / MultiStick(3 Stick / Hard Motion)
