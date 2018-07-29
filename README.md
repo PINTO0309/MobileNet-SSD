@@ -5,7 +5,7 @@ Video playback and object detection are executed asynchronously.<br>
 In order to realize high speed rendering with multi stick, it is implemented in multithreading/OpenGL.<br>
 
 **【Japanese Article】https://qiita.com/PINTO/items/b97b3334ed452cb555e2**<br>
-**【RealSense D435 + MultiProcessing Version】 https://github.com/PINTO0309/MobileNet-SSD-RealSense.git**
+**【RealSense D435(or USB Camera) + MultiProcessing Version】 https://github.com/PINTO0309/MobileNet-SSD-RealSense.git**
 
 # Change history
 [July 19, 2018]　Corresponds to NCSDK v2.05.00.02 / OpenCV 3.4.2 / FPS View<br>
