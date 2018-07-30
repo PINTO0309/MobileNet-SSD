@@ -54,7 +54,7 @@ $ sudo apt-get install python3-pip python3-numpy git cmake
 3. Installing NCSDK
 ```
 $ cd ~
-$ git clone https://github.com/movidius/ncsdk.git
+$ git clone -b ncsdk2 https://github.com/movidius/ncsdk.git
 $ cd ncsdk
 $ make install
 ```
