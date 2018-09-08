@@ -7,7 +7,7 @@ In order to realize high speed rendering with multi stick, it is implemented in 
 **【Japanese Article】<br>
 https://qiita.com/PINTO/items/b97b3334ed452cb555e2**<br><br>
 **【USB Camera + MultiProcessing High performance version】 <br>
-Below is the performance which is more than three times the performance of this repository program.<br>
+Below, when using multiple sticks, it is more than three times the performance of this repository program.<br>
 I recommend that you refer to the following repository.<br>
 https://github.com/PINTO0309/MobileNet-SSD-RealSense.git**
 
