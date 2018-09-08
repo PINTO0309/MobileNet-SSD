@@ -4,7 +4,8 @@ Multiple moving object detection with high accuracy.<br>
 Video playback and object detection are executed asynchronously.<br>
 In order to realize high speed rendering with multi stick, it is implemented in multithreading/OpenGL.<br>
 
-**【Japanese Article】https://qiita.com/PINTO/items/b97b3334ed452cb555e2**<br><br>
+**【Japanese Article】<br>
+https://qiita.com/PINTO/items/b97b3334ed452cb555e2**<br><br>
 **【USB Camera + MultiProcessing High performance version】 <br>
 Below is the performance which is more than three times the performance of this repository program.<br>
 I recommend that you refer to the following repository.<br>
