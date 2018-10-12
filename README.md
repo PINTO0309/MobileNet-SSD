@@ -137,7 +137,7 @@ MobileNet-SSD + Neural Compute Stick(1 Stick) + RaspberryPi3 + USB Camera(640x48
 # 環境
 ・RaspberryPi 3 + Raspbian Stretch
 
-・NCSDK v2.05.00.02 (NCSDK v1では動作しません　**[v1バージョンはこちら](https://github.com/PINTO0309/MobileNet-SSD/tree/v1.0)**)
+・NCSDK v2.08.01 (NCSDK v1では動作しません　**[v1バージョンはこちら](https://github.com/PINTO0309/MobileNet-SSD/tree/v1.0)**)
 
 ・Intel Movidius Neural Compute Stick　１本
 
