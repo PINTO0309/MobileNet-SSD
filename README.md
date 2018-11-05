@@ -53,7 +53,7 @@ $ sudo /etc/init.d/dphys-swapfile restart swapon -s
 ```
 $ sudo apt-get update
 $ sudo apt-get upgrade
-$ sudo apt-get install python3-pip python3-numpy git cmake libqtgui4
+$ sudo apt-get install python3-pip python3-numpy git cmake libqtgui4 libqt4-test
 ```
 3. Installing NCSDK
 ```
@@ -162,7 +162,7 @@ $ sudo /etc/init.d/dphys-swapfile restart swapon -s
 ```
 $ sudo apt-get update
 $ sudo apt-get upgrade
-$ sudo apt-get install python3-pip python3-numpy git cmake libqtgui4
+$ sudo apt-get install python3-pip python3-numpy git cmake libqtgui4 libqt4-test
 ```
 3. NCSDKのインストール
 ```
