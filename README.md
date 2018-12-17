@@ -3,6 +3,7 @@ Ultra-fast MobileNet-SSD(MobileNetSSD) + Neural Compute Stick(NCS) than YoloV2 +
 Multiple moving object detection with high accuracy.<br>
 Video playback and object detection are executed asynchronously.<br>
 In order to realize high speed rendering with multi stick, it is implemented in multithreading/OpenGL.<br>
+**【Warning】 This does not correspond to NCS 2.**  
 
 **【Japanese Article】<br>
 https://qiita.com/PINTO/items/b97b3334ed452cb555e2**<br><br>
