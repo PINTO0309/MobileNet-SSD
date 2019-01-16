@@ -48,7 +48,7 @@ MobileNet-SSD + Neural Compute Stick(1 Stick) + RaspberryPi3 + USB Camera(640x48
 $ sudo nano /etc/dphys-swapfile
 CONF_SWAPSIZE=2048
 
-$ sudo /etc/init.d/dphys-swapfile restart swapon -s
+$ sudo /etc/init.d/dphys-swapfile restart;swapon -s
 ```
 2. Installing packages
 ```
@@ -102,7 +102,7 @@ $ python3 MultiStickSSD.py
 $ sudo nano /etc/dphys-swapfile
 CONF_SWAPSIZE=100
 
-$ sudo /etc/init.d/dphys-swapfile restart swapon -s
+$ sudo /etc/init.d/dphys-swapfile restart;swapon -s
 ```
 
 
@@ -157,7 +157,7 @@ MobileNet-SSD + Neural Compute Stick(1 Stick) + RaspberryPi3 + USB Camera(640x48
 $ sudo nano /etc/dphys-swapfile
 CONF_SWAPSIZE=2048
 
-$ sudo /etc/init.d/dphys-swapfile restart swapon -s
+$ sudo /etc/init.d/dphys-swapfile restart;swapon -s
 ```
 2. パッケージのインストール
 ```
@@ -210,7 +210,7 @@ $ python3 MultiStickSSD.py
 $ sudo nano /etc/dphys-swapfile
 CONF_SWAPSIZE=100
 
-$ sudo /etc/init.d/dphys-swapfile restart swapon -s
+$ sudo /etc/init.d/dphys-swapfile restart;swapon -s
 ```
 
 # 独自学習データの生成手順
